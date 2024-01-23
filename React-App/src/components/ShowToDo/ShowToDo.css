@@ -1,0 +1,12 @@
+.ShowToDo{
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 100%;
+}
+
+.ShowToDo__Wrapper{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 0.3em;
+}
