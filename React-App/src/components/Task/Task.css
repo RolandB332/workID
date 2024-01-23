@@ -1,0 +1,33 @@
+.Task{
+    display: flex;
+    border: 1px solid black;
+    padding: 0.5em;
+    align-items: center;
+}
+
+.Task:not(:first-child){
+    margin: 0.25em 0;
+}
+
+.Task_Content{
+    display: inherit;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Task_Content_Title, .Task_Content_Delete{
+    display: flex;
+    align-items: center;
+    padding: 0 0.5em;
+}
+
+.Task_Content_Delete{
+    font-size:xx-large;
+    justify-content: right;
+    cursor: pointer;
+}
+
+.Task_ArrowLeft, .Task_ArrowRight{
+    font-size: xx-large;
+    cursor: pointer;
+}
