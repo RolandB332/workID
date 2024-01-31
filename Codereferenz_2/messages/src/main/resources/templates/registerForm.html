@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<script src="meinjs.js"></script>
+<script src="sb.js"></script>
+<script src="jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="sb_css.css">
+<link rel="stylesheet" type="text/css" href="css.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap" rel="stylesheet">
+<title>Register</title>
+
+<header th:include="fragments ::
+ kopfbereich('Register_User')">
+ 
+</header>
+
+<div 
+id="navigation">
+<nav th:include="fragments :: navigation">
+
+</nav>
+</div>
+
+<div
+id="inhalt"
+>
+<div th:if="${fehler != null}"
+ th:text="'Fehler:' + ${fehler}">
+ Fehlermeldung
+ </div>
+ 
+ <form action="registerSave.html" method="post">
+<p>username*:
+<br>
+
+<input 
+ required="required"
+ type="text"
+ name="username"
+ size="20"
+ autofocus="autofocus"
+ placeholder="username">
+</p>
+<p>fullname:
+<br>
+<input 
+ required="required"
+ type="text"
+ name="fullname"
+ size="20"
+ placeholder="fullname">
+</p>
+<p>email*:
+<br>
+<input 
+ required="required"
+ type="text"
+ name="email"
+ size="20"
+ placeholder="Email"/>
+</p>
+<p>password*:
+<br>
+
+<input 
+ required="required"
+ type="password"
+ name="password"
+ size="20"
+ placeholder="Passwort"></br>
+
+</p>
+<input type="submit" value="Registrieren!"/>
+</form>
+</div>
+</nav>
+<div
+id="Fuß">
+Seite erstellt von Roland Borok
+</div>
+</html>

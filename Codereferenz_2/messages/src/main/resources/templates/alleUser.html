@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="meinjs.js"></script>
+<script src="sb.js"></script>
+<script src="jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="sb_css.css">
+<link rel="stylesheet" type="text/css" href="css.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap" rel="stylesheet">
+<title>Liste</title>
+</head>
+ <body>
+<header th:include="fragments ::
+ kopfbereich('Alle User')">
+
+</header>
+
+<div 
+id="navigation">
+<nav th:include="fragments :: navigation">
+
+</nav>
+</div>
+<div id ="inhalt">
+ <p th:if="${users == null}">
+ Nachrichtenliste ist leer
+ </p>
+
+ <p th:if="${users != null}">
+ <article>
+ <section th:each="user : ${users}">
+ <h2><span th:text="${user.fullname}">name</span></h2> -
+ <span th:text="${user.username}">date</span><br/>
+ <span th:text="${user.email}">Email</span>
+ </section>
+ </article>
+ </p>
+ </div>
+ <div
+id="Fuß"
+>
+Seite erstellt von Roland Borok
+</div>
+ </body>
+</html>

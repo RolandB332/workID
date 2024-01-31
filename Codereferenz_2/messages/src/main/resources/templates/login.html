@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="meinjs.js"></script>
+<script src="sb.js"></script>
+<script src="jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="sb_css.css">
+<link rel="stylesheet" type="text/css" href="css.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap" rel="stylesheet">
+<title>Login</title>
+ <body>
+ <header th:include="fragments ::
+ kopfbereich('Alle User')">
+
+</header>
+<div 
+id="navigation">
+<nav th:include="fragments :: navigation">
+
+</nav>
+</div>
+<div id ="inhalt">
+ <h1>Anmeldeseite</h1>
+ <p>Bitte melden Sie sich mit Ihrem Nutzernamen und Ihrem Passwort an:</p>
+ <form action="/security/spring_security_check" method="POST">
+ <input class="inputField" type="text" name="username" placeholder="Benutzername?"/>
+ <input class="inputField" type="password" name="password" placeholder="Passwort?">
+ <input class="submitButton" value="Anmelden" type="submit">
+ </form>
+ </div>
+ </body>
+</html>
