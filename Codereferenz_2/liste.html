@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="meinjs.js"></script>
+<script src="sb.js"></script>
+<script src="jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="sb_css.css">
+<link rel="stylesheet" type="text/css" href="css.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap" rel="stylesheet">
+<title>Liste</title>
+</head>
+<body>
+<div
+id="überschrift"
+>
+Zitaten von berühmten Personen
+</div>
+<div 
+id="navigation">
+<nav>
+<a id="link" href="login.html">Login</a>
+<b >Liste</b>
+<a id="link" href="message.html">Nachricht schreiben</a>
+</nav>
+</div>
+
+
+<div
+id="inhalt"
+>
+<article>
+
+
+<section id="runde1"><h2><a href="https://de.wikipedia.org/wiki/Harry_Potter">Harry Potter</a></h2> <h3>@potter Tue Dec18 12:41:22 CET 2020</h3> </br><h4>You are a wizard harry.</h4></section>
+
+
+<section><h2><a href="https://de.wikipedia.org/wiki/Indiana_Jones">Indiana Jones</a></h2> <h3>@jones Fri Mar22 12:11:52 CET 2020</h3></br><h4>Rolling stones</h4></section>
+
+
+<section><h2><a href="https://de.wikipedia.org/wiki/Britney_Spears">Britney Spears</a></h2> <h3>@spears Mon Apr11 12:41:22 CET 2020</h3></br><h4>I'm not a girl, not yet a woman</h4></section>
+
+
+<section id="runde2"><h2><a href="https://de.wikipedia.org/wiki/Johnny_Depp">Johnny Depp</a></h2> <h3>@depp Son Mai26 12:41:22 CET 2020</h3></br><h4>Auszeichnungen sind nicht so wichtig für mich, wie wenn ein 10 jähriges Kind sagt, "Ich liebe Captain Jack Sparrow!</h4></section>
+
+
+</article>
+</div>
+<h1>Aktuelle Uhrzeit</h1>
+ <div id="uhrzeit"></div>
+
+ <script type="text/javascript">
+ var timer = setTimeout(aktualisiereUhrzeit,1000);
+ function aktualisiereUhrzeit() {
+ var d = new Date();
+ var t = d.toLocaleTimeString();
+ document.getElementById("uhrzeit").innerHTML = t;
+ timer=setTimeout(aktualisiereUhrzeit,1000);
+ }
+ </script>
+<div
+id="Fuß"
+>
+Seite erstellt von Roland Borok
+</div>
+</body>
+</html>

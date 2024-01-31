@@ -1,0 +1,80 @@
+#überschrift{
+	
+		color: black;
+		
+		border-width : 2px;
+		margin : 8px; 
+		font-size: 20px;
+		font-family: 'Rum Raisin', sans-serif;
+}
+h2{
+	display:inline;
+}
+h3{
+	display:inline;
+	color: black;
+	font-size: 15px;
+	opacity: 40%;
+	float:right;
+}
+h4{
+	display:inline;
+	color: black;
+	font-size: 18px;
+	font-weight: normal;
+	
+}
+html{
+	background-color:#CCC;
+}
+section {
+	border-style:solid;
+	
+}
+#count{display:inline;}
+#result{display:inline;}
+
+#location {
+	margin-right : 150px;
+	font-family: 'Creepster', cursive;
+}
+
+#runde1{
+	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#runde2{
+	
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+
+#inhalt{
+	margin-left : 150px;
+	font-family: 'Creepster', cursive;
+	
+}
+
+#navigation{
+	
+	position : absolute;
+	width : 50px; 
+	transition: font-size 0,5s;
+	font-family: 'Creepster', cursive;
+}
+#Fuß{
+		color: black;
+		
+		border-width : 2px;
+		margin : 8px;
+		font-size: 15px;
+		font-family: 'Creepster', cursive;
+}
+#link:hover {
+	font-size: 18px;
+}
+section:hover{
+	font-size: 18px;
+}

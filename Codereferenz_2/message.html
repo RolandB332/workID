@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<script src="jquery.js"></script>
+<script src="sb.js"></script>
+<link rel="stylesheet" type="text/css" href="sb_css.css">
+<script src="meinjs.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="css.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap" rel="stylesheet">
+<div
+id="überschrift">
+Nachricht schreiben
+
+</div>
+
+
+<div 
+id="navigation">
+<nav>
+<a id="link" href="login.html">Login</a>
+<a id="link" href="liste.html">Liste</a>
+<b >Nachricht schreiben</b>
+</nav>
+</div>
+
+<div
+id="inhalt">
+<nav>
+<form method="post",action="verarbeite-daten.html">
+
+<p>text*:
+<br>
+<input 
+ title="Message angeben"
+ id="message"
+ required="required"
+ type="text"
+ name="text"
+ size="20"
+ placeholder="Nachricht"/>
+</p>
+<div id="count">
+Count:
+</div> 
+<p id="result"></p>
+
+<p>location:
+<br>
+<input 
+ title="locate me knopf drücken"
+ readonly
+ id="location"
+ type="text"
+ name="location"
+ size="20"
+ placeholder="Location"/>
+</p>
+<p>date*:
+<br>
+<input 
+ title="Datum eingeben"
+ id="date"
+ required="required"
+ type="text"
+ name="date"
+ size="20"
+ placeholder="Datum"/>
+</p>
+<input type="submit" />
+<button type="button" onclick="locateMe()">Locate me!</button>
+
+
+<script>
+ function locateMe() {
+ window.navigator.geolocation.getCurrentPosition(geolocationSuccess);
+ }
+ function geolocationSuccess(position) {
+ var coords = position.coords;
+ var url = 'https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat='+
+coords.latitude +'&lon='+ coords.longitude;
+ fetch(url).then(function(response) {
+ return response.json();
+ }).then(function(json) {
+ var town = json.address.town;
+ var cityElement = document.getElementById("location");
+ cityElement.value = town;
+ });
+ }
+ </script>
+</form>
+
+</nav>
+</div>
+
+<div
+id="Fuß">
+Seite erstellt von Roland Borok
+</div>
+</html>

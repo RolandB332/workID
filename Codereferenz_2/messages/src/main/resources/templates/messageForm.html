@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+<html>
+<script src="meinjs.js"></script>
+<script src="sb.js"></script>
+<script src="jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="sb_css.css">
+<link rel="stylesheet" type="text/css" href="css.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap" rel="stylesheet">
+<title>Nachricht Schreiben</title>
+<body>
+<header th:include="fragments ::
+ kopfbereich('Alle User')">
+
+</header>
+
+<div 
+id="navigation">
+<nav th:include="fragments :: navigation">
+
+</nav>
+</div>
+
+<div id ="inhalt">
+ <h1>Neue Nachricht schreiben</h1>
+ <form action="/createMessage.html" method="post">
+ <textarea name="messageText" maxlength="140"></textarea>
+ <input value="Abschicken" type="submit" />
+ </form>
+ </div>
+</body>
+</html>

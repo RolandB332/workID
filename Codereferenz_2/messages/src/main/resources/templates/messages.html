@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html> 
+
+<head>
+<script src="meinjs.js"></script>
+<script src="sb.js"></script>
+<script src="jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="sb_css.css">
+<link rel="stylesheet" type="text/css" href="css.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap" rel="stylesheet">
+<title>Liste</title>
+</head>
+
+<body>
+<header th:include="fragments ::
+ kopfbereich('Zitaten von berühmten Personen')">
+
+</header>
+<script type="text/javascript" th:inline="text">
+ var lastClientMessage = [[${lastClientMessage}]];
+ </script>
+
+<script src
+="js/jquery-1.8.2.min.js">
+</script>
+
+<script type
+="text/javascript" src
+="/js/ajax.js">
+</script>
+
+<h1>Liste der Nachrichten</h1>
+
+<div 
+id="navigation">
+<nav th:include="fragments :: navigation">
+
+</nav>
+</div>
+
+<div id ="inhalt">
+ <p th:if="${messages == null}">
+ Nachrichtenliste ist leer
+ </p>
+
+ <p th:if="${messages != null}">
+ <article>
+ <section th:each="message : ${messages}">
+ <h2><span th:text="${message.user.fullname}">name</span></h2> -
+ <span th:text="${message.date}">date</span><br/>
+ <span th:text="${message.text}">text</span>
+ </section>
+ </article>
+ </p>
+ </div>
+ <div id="Fuß">
+Seite erstellt von Roland Borok
+</div>
+</body>
+</html>

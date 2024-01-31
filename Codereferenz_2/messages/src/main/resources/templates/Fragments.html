@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+ <body>
+ <header th:fragment="kopfbereich(titel)">
+ <div id="überschrift" th:text="${titel}">überschrift</div>
+ </header>
+ 
+ <nav th:fragment="navigation">
+ <ul>
+ <li>
+ <a href="user.html"> 
+ Alle User
+ </a>
+ </li>
+ <li>
+ <a href="register.html">
+ Registrierung
+ </a>
+ </li>
+ <li>
+ <a href="messages.html">
+ Nachrichten
+ </a>
+ </li>
+ <li>
+ <a href="messageForm.html">
+ Nachricht Schreiben
+ </a>
+ </li>
+ </ul>
+ </nav>
+ </body>
+</html>
